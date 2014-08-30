@@ -50,13 +50,13 @@ class RequestResponse implements JsonSerializable {
 }
 
 class SuccessResponse extends RequestResponse {
-	public function __construct($data = null) {
-		parent::__construct(self::SUCCESS, $data);
+	public function __construct($data = null, $state = null) {
+		parent::__construct(self::SUCCESS, $data, $state);
 	}
 }
 class ErrorResponse extends RequestResponse {
-	public function __construct($data = null) {
-		parent::__construct(self::ERROR, $data);
+	public function __construct($data = null, $state = null) {
+		parent::__construct(self::ERROR, $data, $state);
 	}
 }
 
